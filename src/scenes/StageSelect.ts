@@ -13,14 +13,14 @@ export default class StageSelect extends Phaser.Scene {
     const centerX = this.cameras.main.width / 2;
     const centerY = this.cameras.main.height / 2;
 
-    this.add.text(centerX-20, centerY - 100, 'Cyclic', {
+    this.add.text(centerX - 20, centerY - 100, 'Cyclic', {
       fontSize: '24px',
       fontFamily: 'Turret Road',
       color: '#444',
     }).setOrigin(0.5);
 
     STAGES.forEach((stage, index) => {
-      const button = this.add.text(centerX-20, centerY + index * 50, `「 ${stage.name} 」`, {
+      const button = this.add.text(centerX - 20, centerY + index * 50, `「 ${stage.name} 」`, {
         fontSize: '24px',
         fontFamily: 'Turret Road',
         color: `#${stage.panelColor.toString(16).padStart(6, '0')}`,
